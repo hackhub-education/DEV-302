@@ -1,0 +1,10 @@
+.hidden{
+	display:none;
+}
+.hint_text{
+	color:red;
+	font-size:0.75em;
+}
+input{
+	border:solid;
+}
