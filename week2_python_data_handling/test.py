@@ -28,7 +28,7 @@ with open('data.json', 'r+') as json_file:
     data = json.load(json_file)
     for each in data['data']:
         for option, value in each['options'].items():
-            if option is not None and type(value) != bool:
+            if type(value) != bool and each['_id'] not in inconsistentData:
                 inconsistentData.append(each['_id'])  # get inconsistent _ids
 
             if value == 0:
@@ -41,8 +41,7 @@ with open('data.json', 'r+') as json_file:
     json_file.truncate()
 
 
-inconsistentDataSet = set(inconsistentData)
-print(len(inconsistentDataSet))
+print(inconsistentData)
 
 
 with open('data.json', 'r+') as json_file:

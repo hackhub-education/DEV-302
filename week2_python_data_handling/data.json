@@ -13330,9 +13330,9 @@
             "modified_at": "2019-11-13T22:11:14",
             "modified_by": "masteryi",
             "options": {
-                "enable_all_notification": false,
-                "enable_cancel_notification": false,
-                "enable_new_user_notification": false,
+                "enable_all_notification": true,
+                "enable_cancel_notification": true,
+                "enable_new_user_notification": true,
                 "enable_renewal_notification": true
             }
         },
@@ -13410,8 +13410,8 @@
             "options": {
                 "enable_all_notification": false,
                 "enable_cancel_notification": false,
-                "enable_new_user_notification": false,
-                "enable_renewal_notification": false
+                "enable_new_user_notification": true,
+                "enable_renewal_notification": true
             }
         }
     ]
