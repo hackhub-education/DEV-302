@@ -1,0 +1,65 @@
+.hidden{
+	display:none;
+}
+.hint_text{
+	color:red;
+	font-size:0.75em;
+}
+input{
+	border:solid gray;
+}
+
+h1{
+	text-align: center;
+	margin-top:15%;
+}
+
+label{
+	color:black;
+}
+
+a{
+	color:blue;
+}
+
+.login_window{
+	display:flex;
+	flex-direction: column;
+
+	justify-content:space-around;
+	align-items: center;
+	background-color: rgb(243, 241, 241);
+	margin-top: 300 px;
+	margin:0 auto;
+	border:2px solid lightgray;
+	width:300px;
+}
+
+#submit1{
+	color:white;
+	background-color: blue;
+	border-color: blue;
+	width:200px;
+}
+
+.outside_login_window{
+	display:flex;
+	flex-direction: column;
+
+	justify-content:space-around;
+	align-items: center;
+	color: lightgray;
+	margin-top: 300 px;
+	margin:0 auto;
+	width:300px;
+}
+
+.input_box{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top:15 px;
+	margin-bottom: 0 px;
+	margin:15 auto;
+}

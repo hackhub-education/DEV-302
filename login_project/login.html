@@ -3,30 +3,43 @@
       <title>
         Title
       </title>
-     <link rel="stylesheet" href="static/style.css" />
+     <link rel="stylesheet" href="./static/login_page_style.css"/>
   </head>
   <body>
-    <h1>Login Page</h1>
+    <header>
+      <h1>Login Page</h1>
+    </header>
+    
     <form action="login.py" method="GET">
-        <div>
+      <div class="login_window">
+
+        <div class="input_box">
           <label>User Name:</label>
           <input type="text" id="username" name="username" placeholder="Enter your account name"  />
         </div>
+
         <div class="hidden hint_text" id="username_hint"> * Username cannot be empty</div>
 
-        <div>
+        <div class="input_box">
           <label>Password:</label>
-          <input type="password" id="password" name="password"  />
+          <input type="password" id="password" name="password" />
         </div>
 
-        <div>
-          <input type="submit" id="submit1" value="Submit1"/>
-          
-          <button id="submit2">Submit2</button>
-          <input type="button" id="submit3" value="Submit3"/>
+        <div class="input_box">
+          <input type="submit" id="submit1" value="Login In"/>
         </div>
+
+      </div>
     </form>
+    <div class="outside_login_window">
+      <div class="input_box">
+        <a>Register here.</a>
+      </div>
 
+      <div class="input_box">
+        <a>Forget password?</a>
+      </div>
+    </div>
 
   </body>
   <script
