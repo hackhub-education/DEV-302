@@ -10,7 +10,7 @@ python3 -m venv env
 To Activate the virtual environment
 
 ```
-source env/bin/P
+source env/bin/activate
 ```
 
 After this anything installed (including Django will go to this virtual environment)
