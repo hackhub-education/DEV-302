@@ -8,7 +8,7 @@ from . import views #import views modules form current folder
  
  
 urlpatterns = [
-    path('', views.index) #note: do not call this function, just pass a reference
-    path('', views.index)
-    path('', views.index)
+    path('', views.index), #note: do not call this function, just pass a reference
+    path('', views.index),
+    path('', views.index),
 ]
