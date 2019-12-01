@@ -1,0 +1,47 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+
+
+# Create your views here.
+
+
+# Create your views here.
+def index(request):
+    return HttpResponse("""<html>
+  <head>
+      <title>
+        !Title
+      </title>
+     <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    <form action="login.py" method="GET">
+        <div>
+          <label>User Name:</label>
+          <input type="text" id="username" name="username" placeholder="Enter your account name"  />
+        </div>
+        <div class="hidden hint_text" id="username_hint"> * Username cannot be empty</div>
+
+        <div>
+          <label>Password:</label>
+          <input type="password" id="password" name="password"  />
+        </div>
+
+        <div>
+          <input type="submit" id="submit1" value="Submit1"/>
+          
+          <button id="submit2">Submit2</button>
+          <input type="button" id="submit3" value="Submit3"/>
+        </div>
+    </form>
+
+
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="static/script.js" ></script>
+
+</html>""")
