@@ -25,10 +25,22 @@ def index(request):
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
-    context = {'question': question,
-               'is_recent': question.was_published_recently()}
 
-    print("\n\n\ntest", question.was_published_recently())
+    # if question.was_published_recently():
+    #   is_recent_text = "Recent"
+    # else:
+    #   is_recent_text = "Not Recent"
+
+    is_recent_text = "Recent" if question.was_published_recently() else "Not Recent"
+
+    context = {
+        'question': question,
+        'is_recent': is_recent_text
+    }
+
+    # # for debug
+    # print("\n\n\n test => recent", question.was_published_recently(), "\n\n\n")
+
     return render(request, 'polls/detail.html', context)
 
 

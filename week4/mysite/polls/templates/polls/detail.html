@@ -5,5 +5,8 @@
 <ul>
   <li>Question text: {{question.question_text}}</li>
   <li>Public Date: {{question.pub_date}}</li>
-  <li>Is this question recent? {{ is_recent }}</li>
+
+  <li>
+    Is this question recent? {{ is_recent|yesno:"Recent,Not Recent" }}
+  </li>
 </ul>
