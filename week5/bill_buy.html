@@ -1,304 +1,191 @@
 <html>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-   $(document).ready(function(){
-      
-   });
-</script>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 
-<style>
-   .product-input{
-      max-width: 100px; text-align: center;
-   }
-</style>
+    <style>
+      body {
+        background: lightblue;
+      }
+      h1 {
+        text-align: center;
+      }
+      h1 img {
+        display: block;
+        margin: 10px auto;
+        width: auto;
+      }
+      #fund-total {
+        text-align: center;
+        padding: 30px;
+        background: crimson;
+        color: white;
+        font-size: 2em;
+      }
+      .error {
+        font-size: 80%;
+        color: red;
+        display: none;
+      }
+      .product-input {
+        max-width: 100px;
+        text-align: center;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .product {
+        width: 30%;
+        border: solid thin;
+        text-align: center;
+        background: white;
+        margin: 1%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
 
-</head>
-
-<body>
-
-   <noscript>You need to enable JavaScript to see the goods</noscript>
-   <div id="root">
-      
+  <body>
+    <noscript>You need to enable JavaScript to see the goods</noscript>
+    <div id="root">
       <div class="container">
-         <h1><img src="https://neal.fun//Spend/billgates.png" class="sc-kgoBCf dzFgpK">Spend Bill Gates' Money</h1>
-         <div id="fund-total-wrap" data-fund-total="86443800000">$86,443,800,000 left</div>
-         <div class="productsWrapper">
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/bigmac.jpg" class="product-img">
-               <div class="product-title">Big Mac</div>
-               <div class="product-price">$2</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Big Mac" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
+        <h1>
+          <img
+            src="https://neal.fun//Spend/billgates.png"
+            class="sc-kgoBCf dzFgpK"
+          />Spend Bill Gates' Money
+        </h1>
+        <div id="fund-total">
+          $86,443,800,000 left
+        </div>
+        <div class="products">
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/bigmac.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Big Mac</div>
+            <div class="product-price">$2</div>
+            <div class="" data-key="Big Mac" data-price="2">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Big Mac"
+                class="product-input"
+                value="0"
+                min="0"
+              /><button class="product-buy">
+                Buy
+              </button>
             </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/cupofcoffee.jpg" class="product-img">
-               <div class="product-title">Cup of Coffee</div>
-               <div class="product-price">$4</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Cup of Coffee" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
+            <p class="error">Invalid number input</p>
+          </div>
+
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/cupofcoffee.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Cup of Coffee</div>
+            <div class="product-price">$4</div>
+            <div class="" data-key="Cup of Coffee" data-price="4">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Cup of Coffee"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
             </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/book.jpg" class="product-img">
-               <div class="product-title">Book</div>
-               <div class="product-price">$15</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Book" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
+          </div>
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/book.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Book</div>
+            <div class="product-price">$15</div>
+            <div class="">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Book"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
             </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/videogame.jpg" class="product-img">
-               <div class="product-title">Video Game</div>
-               <div class="product-price">$60</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Video Game" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
+          </div>
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/videogame.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Video Game</div>
+            <div class="product-price">$60</div>
+            <div class="">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Video Game"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
             </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/charity.jpg" class="product-img">
-               <div class="product-title">Charity</div>
-               <div class="product-price">$100</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Charity" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
+          </div>
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/charity.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Charity</div>
+            <div class="product-price">$100</div>
+            <div class="">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Charity"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
             </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/headphones.jpg" class="product-img">
-               <div class="product-title">Headphones</div>
-               <div class="product-price">$200</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Headphones" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
+          </div>
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/headphones.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Headphones</div>
+            <div class="product-price">$200</div>
+            <div class="">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Headphones"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
             </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/airjordans.jpg" class="product-img">
-               <div class="product-title">Air Jordans</div>
-               <div class="product-price">$200</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Air Jordans" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/skateboard.jpg" class="product-img">
-               <div class="product-title">Skateboard</div>
-               <div class="product-price">$300</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Skateboard" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/smartphone.jpg" class="product-img">
-               <div class="product-title">Smartphone</div>
-               <div class="product-price">$600</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Smartphone" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/gamingconsole.jpg" class="product-img">
-               <div class="product-title">Gaming Console</div>
-               <div class="product-price">$600</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Gaming Console" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/bike.jpg" class="product-img">
-               <div class="product-title">Bike</div>
-               <div class="product-price">$800</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Bike" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/drone.jpg" class="product-img">
-               <div class="product-title">Drone</div>
-               <div class="product-price">$800</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Drone" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/designerhandbag.jpg" class="product-img">
-               <div class="product-title">Designer Handbag</div>
-               <div class="product-price">$1,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Designer Handbag" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/jetski.jpg" class="product-img">
-               <div class="product-title">Jet Ski</div>
-               <div class="product-price">$8,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Jet Ski" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/4ktv.jpg" class="product-img">
-               <div class="product-title">4K TV</div>
-               <div class="product-price">$10,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="4K TV" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/diamondring.jpg" class="product-img">
-               <div class="product-title">Diamond Ring</div>
-               <div class="product-price">$10,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Diamond Ring" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/rolex.jpg" class="product-img">
-               <div class="product-title">Rolex</div>
-               <div class="product-price">$15,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Rolex" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/speedboat.jpg" class="product-img">
-               <div class="product-title">Speed boat</div>
-               <div class="product-price">$30,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Speed boat" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/foodtruck.jpg" class="product-img">
-               <div class="product-title">Food Truck</div>
-               <div class="product-price">$50,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Food Truck" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/tesla.jpg" class="product-img">
-               <div class="product-title">Tesla</div>
-               <div class="product-price">$70,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Tesla" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/monstertruck.jpg" class="product-img">
-               <div class="product-title">Monster Truck</div>
-               <div class="product-price">$150,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Monster Truck" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/helicopter.jpg" class="product-img">
-               <div class="product-title">Helicopter</div>
-               <div class="product-price">$175,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Helicopter" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/ferrari.jpg" class="product-img">
-               <div class="product-title">Ferrari</div>
-               <div class="product-price">$200,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Ferrari" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/lamborghini.jpg" class="product-img">
-               <div class="product-title">Lamborghini</div>
-               <div class="product-price">$200,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Lamborghini" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/firetruck.jpg" class="product-img">
-               <div class="product-title">Firetruck</div>
-               <div class="product-price">$200,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Firetruck" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/townhouse.jpg" class="product-img">
-               <div class="product-title">Townhouse</div>
-               <div class="product-price">$200,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Townhouse" class="product-input" value="1" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/bar.jpg" class="product-img">
-               <div class="product-title">Bar</div>
-               <div class="product-price">$300,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Bar" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/pizzashop.jpg" class="product-img">
-               <div class="product-title">Pizza Shop</div>
-               <div class="product-price">$500,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Pizza Shop" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/barofgold.jpg" class="product-img">
-               <div class="product-title">Bar of Gold</div>
-               <div class="product-price">$500,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Bar of Gold" class="product-input" value="2" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/superbowlad.jpg" class="product-img">
-               <div class="product-title">Superbowl Ad</div>
-               <div class="product-price">$5,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Superbowl Ad" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/beachhouse.jpg" class="product-img">
-               <div class="product-title">Beach House</div>
-               <div class="product-price">$5,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Beach House" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/yacht.jpg" class="product-img">
-               <div class="product-title">Yacht</div>
-               <div class="product-price">$10,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Yacht" class="product-input" value="1" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/f16.jpg" class="product-img">
-               <div class="product-title">F16</div>
-               <div class="product-price">$15,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="F16" class="product-input" value="1" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/skyscraper.jpg" class="product-img">
-               <div class="product-title">Skyscraper</div>
-               <div class="product-price">$50,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Skyscraper" class="product-input" value="1" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/mansion.jpg" class="product-img">
-               <div class="product-title">Mansion</div>
-               <div class="product-price">$50,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Mansion" class="product-input" value="1" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/rocket.jpg" class="product-img">
-               <div class="product-title">Rocket</div>
-               <div class="product-price">$60,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Rocket" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/passengerjet.jpg" class="product-img">
-               <div class="product-title">Passenger Jet</div>
-               <div class="product-price">$150,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Passenger Jet" class="product-input" value="1" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/monalisa.jpg" class="product-img">
-               <div class="product-title">Mona Lisa</div>
-               <div class="product-price">$780,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Mona Lisa" class="product-input" value="1" ><button class="product-buy" disabled="">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/cruiseship.jpg" class="product-img">
-               <div class="product-title">Cruise Ship</div>
-               <div class="product-price">$1,200,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="Cruise Ship" class="product-input" value="1" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/nbateam.jpg" class="product-img">
-               <div class="product-title">NBA Team</div>
-               <div class="product-price">$1,300,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="NBA Team" class="product-input" value="1" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/mlbteam.jpg" class="product-img">
-               <div class="product-title">MLB Team</div>
-               <div class="product-price">$1,500,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="MLB Team" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-            <div class="product-wrapper">
-               <img src="https://neal.fun/spend/minified/nflteam.jpg" class="product-img">
-               <div class="product-title">NFL Team</div>
-               <div class="product-price">$2,300,000,000</div>
-               <div class=""><button class="product-sell">Sell</button><input pattern="\d*" type="number" id="NFL Team" class="product-input" value="0" ><button class="product-buy">Buy</button></div>
-            </div>
-         </div>
-         <div class="">
-            <div>Your Shopping Spree</div>
-            <div class="selected-products">
-               <div class="selected-product-wrapper">
-                  <img src="https://neal.fun/spend/minified/townhouse.jpg" class="selected-product-img">
-                  <div class="selected-product-name">Townhouse</div>
-                  <div class="selected-product-amount"> x 1</div>
-               </div>
-               
-               <div class="selected-product-wrapper">
-                  <img src="https://neal.fun/spend/minified/cruiseship.jpg" class="selected-product-img">
-                  <div class="selected-product-name">Cruise Ship</div>
-                  <div class="selected-product-amount"> x 1</div>
-               </div>
-               <div class="selected-product-wrapper">
-                  <img src="https://neal.fun/spend/minified/nbateam.jpg" class="selected-product-img">
-                  <div class="selected-product-name">NBA Team</div>
-                  <div class="selected-product-amount"> x 1</div>
-               </div>
-            </div>
-         </div>
+          </div>
+        </div>
+        <!-- end of products  -->
+
+        <div class="shoppingCart">
+          <h2>Your Shopping Spree</h2>
+          <ul>
+            <!-- <li>Big Mac, $2 x 3</li>
+            <li>Big Mac, $2 x 3</li>
+            <li>Big Mac, $2 x 3</li> -->
+          </ul>
+        </div>
       </div>
-   </div>
-</body>
+    </div>
+  </body>
 </html>
