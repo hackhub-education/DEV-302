@@ -1,0 +1,207 @@
+/* general style */
+/*@font-face {
+    font-family: 'benz_font';
+    src: url('HYa3gf.woff2') format('woff2'),
+        url('HYa3gf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+a{
+    text-decoration: none;
+}
+
+body{
+	background:#171717;
+	color:#fff;
+	margin: 0;
+	/*font-family: 'benz_font';*/
+    font-family: "Microsoft Yahei",sans-serif;
+}
+
+
+header{
+	background:#050505;
+	padding:10px;
+}
+header img{
+	max-height:35px;
+}
+main{
+	text-align: center;
+	background: #171717;
+	margin-bottom:50px;
+}
+main> *{
+	width:95%;
+	margin:10px auto;
+}
+
+main .main-img-wrapper{
+    height: 250px;
+    background-size: cover;
+    width: 97%;
+    margin: 0 auto;
+}
+main .home-img-wrapper{
+    background: url(../img/prize.jpg) center center;
+    background-size: cover;
+    height: 350px;
+    background-repeat: no-repeat;
+}
+main .home-img-wrapper h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+main .home-img-wrapper h1{
+    margin-top: 5px;
+}
+
+
+
+#content{
+	margin: 0 auto;
+	width: 95%;
+	max-width:400px;
+}
+#content div{
+	margin:10px;
+}
+
+h2.red{
+    background:#f12c2c;
+    padding:10px;
+}
+/*h2.blue{
+    background:#00adef;
+    padding:10px;
+}*/
+.left{
+    text-align:left;
+}
+.input-wrapper.blue{
+    border-left:solid 5px #00adef;
+}
+.input-wrapper.red{
+	border-left:solid 5px #f12c2c;
+}
+
+input,
+.input{
+	color: #111;
+    padding: 10px;
+    border: none;
+	height: 30px;
+	width:95%;
+	background:white;
+	text-align: center;
+}
+p.input{
+	line-height: 30px;
+}
+
+input:focus{
+	border:none;
+	outline:none;
+}
+
+.terms-btn {
+	background: none transparent;
+	padding: 9px 40px 8px;
+	line-height: 50px;
+	height: 50px;
+	width: 100%;
+	max-width: 240px;
+	font-size: 18px;
+    font-weight: 300;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.link-btn {
+        background: #00adef;
+        padding: 15px 50px;
+        line-height: 50px;
+        height: 50px;
+        width: 100%;
+        max-width: 240px;
+        font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.home-btn {
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    background: #00adef;
+    border: none;
+    border-radius: 0px;
+    background-clip: padding-box;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+/* footer section */
+footer{
+	background: #222;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+}
+footer p{
+	font-size: 11.5px;
+}
+
+
+/*turntable style*/
+#turntable #turntable-bg {
+    width: 325px;
+    height: 300px;
+    margin: 0 auto;
+    background: url(../img/turntable-bg.jpg) no-repeat;
+    background-position:center center;
+    background-size:cover;
+    position: relative;
+}
+
+#turntable img.pointer {
+	width:87px;
+    position: absolute;
+    z-index: 10;
+    top: 77.5px;
+    left: 128px;
+    cursor:pointer;
+}
+#turntable img.turntable-base {
+	width:225px;
+    position: absolute;
+    z-index: 5;
+    top: 30px;
+    left: 58px;
+    transition: all 4s;
+}
+
+
+
+/*responsive design*/
+
+/*iphone 5 or +*/
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.75em;
+    }
+}
+
+/*iphone 7 or +*/
+@media only screen and (min-width: 376px) {
+    main h1 {
+        margin-bottom:30px;
+    }
+}
