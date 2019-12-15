@@ -1,0 +1,72 @@
+附件内为每个活动页面的修改意见，请查收。另外欢迎页面的图片可以用附件中的这张图。
+
+
+活动页面中的所有中文字请使用附件中的字体，标题字体缩放比例为70%，正文字体缩放比例为80%。
+
+
+关于大转盘，6个中奖格子总共加起来的中奖几率可为1.5%，谢谢参与的几率为98.5%。目前定下来的奖品有（附暂定几率）：
+
+
+Sports hat/cap 奔馳運動帽 （0.3%）
+Sport sunglasses 奔馳運動墨鏡 （0.3%）
+Wine stopper/opener set 奔馳開瓶器/酒塞 （0.3%）
+Smart brand silicone mug  Smrat馬克杯 （0.3%）
+Metal water bottle 奔馳金屬質水壺 （0.2%）
+Golf ball, tees, towel set 奔馳高爾夫球/球釘/毛巾三件套 （0.1%）
+
+我会尽量问奔驰多要写lanyard作为‘参与奖’，但不确定他们会不会给，所以目前就这样吧。如果有什么问题 可以随时和我联系。
+
+
+/var/www/html/public/css
+
+HTML
+
+/var/www/html/resources/views
+
+
+
+
+curl http://oscarzhang.com/turntable.png > turntable.png
+curl https://www.mercedes-benz-richmond.ca/wp-content/themes/DealerInspireDealerTheme/images/video-fallback-background.jpg > prize.jpg
+
+
+微软雅黑
+
+運動帽 
+運動墨鏡
+開瓶器/酒塞
+馬克杯
+金屬質水壺
+高爾夫三件套
+
+
+
+1. 首页的图片可以改回刚才发的那张截图，在图上放字会好看些 - done
+2. 抽奖页面：奖品在5个字及5个字以上的 可以再把字体缩小1-2号 （24号字改到了22号字 改变不是很明显——
+3. 所有页面下方的copyright,请改为：Mercedes-Benz Vancouver Retail Group -done
+
+4. 中奖页：能否试试把上方“新年快乐”等文字去掉，整体上移？你今天给我图片的spec我可以在明天温哥华时间上午10点给你
+--这个也我也已经做完了 明天换一下图片 然后就可以测试了
+
+5. 中奖页的恭喜信息（紅色部分）改为
+“恭喜！您贏得了”（另起一行）  
+“xxx一份”   -- done
+
+6. 中奖页紅色部分下方文字改為左对齐  -- done
+
+7. 没中奖页：把上方“新年快乐”等标题文字去掉，整体上移。剩下文字（很抱歉xxx）靠左对齐。在“财源”后面请用句号
+
+8. 没中奖页可以挑三到四张这个网址上的图片，然后最后新春特惠也导到这个url：https://www.mbvancouver.ca/new-vehicle-offers/   -- done
+
+
+另外 我发现转转盘的时候 有时候他只会走一格 在最近的一个‘谢谢参与’就停下了，有什么办法能让他至少转满一圈或多转几圈吗？
+
+我检查了一下转盘的逻辑 你说的只走一格的情况应该不会发生 最少都会保证转盘转3圈以上  可能需要清空一下缓存试试
+
+
+:
+1.转盘上高尔夫三件套字样，改为高尔夫  --DONE
+:
+2.中奖页 奖品名称 只写中文，另在领奖须知的最后加一句话：展示圖片可能與實物不符，請以實物為準。
+:
+3.没中奖页面的最后“查看优惠”按键，改为蓝底白字
