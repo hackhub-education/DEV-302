@@ -1,0 +1,191 @@
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <style>
+      body {
+        background: lightblue;
+      }
+      h1 {
+        text-align: center;
+      }
+      h1 img {
+        display: block;
+        margin: 10px auto;
+        width: auto;
+      }
+      #fund-total {
+        text-align: center;
+        padding: 30px;
+        background: crimson;
+        color: white;
+        font-size: 2em;
+      }
+      .error {
+        font-size: 80%;
+        color: red;
+        display: none;
+      }
+      .product-input {
+        max-width: 100px;
+        text-align: center;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .product {
+        width: 30%;
+        border: solid thin;
+        text-align: center;
+        background: white;
+        margin: 1%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to see the goods</noscript>
+    <div id="root">
+      <div class="container">
+        <h1>
+          <img
+            src="https://neal.fun//Spend/billgates.png"
+            class="sc-kgoBCf dzFgpK"
+          />Spend Bill Gates' Money
+        </h1>
+        <div id="fund-total">
+          $86,443,800,000 left
+        </div>
+        <div class="products">
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/bigmac.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Big Mac</div>
+            <div class="product-price">$2</div>
+            <div class="" data-key="Big Mac" data-price="2">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Big Mac"
+                class="product-input"
+                value="0"
+                min="0"
+              /><button class="product-buy">
+                Buy
+              </button>
+            </div>
+            <p class="error">Invalid number input</p>
+          </div>
+
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/cupofcoffee.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Cup of Coffee</div>
+            <div class="product-price">$4</div>
+            <div class="" data-key="Cup of Coffee" data-price="4">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Cup of Coffee"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/book.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Book</div>
+            <div class="product-price">$15</div>
+            <div class="">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Book"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/videogame.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Video Game</div>
+            <div class="product-price">$60</div>
+            <div class="">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Video Game"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/charity.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Charity</div>
+            <div class="product-price">$100</div>
+            <div class="">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Charity"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="https://neal.fun/spend/minified/headphones.jpg"
+              class="product-img"
+            />
+            <div class="product-title">Headphones</div>
+            <div class="product-price">$200</div>
+            <div class="">
+              <button class="product-sell">Sell</button
+              ><input
+                pattern="\d*"
+                type="number"
+                id="Headphones"
+                class="product-input"
+                value="0"
+              /><button class="product-buy">Buy</button>
+            </div>
+          </div>
+        </div>
+        <!-- end of products  -->
+
+        <div class="shoppingCart">
+          <h2>Your Shopping Spree</h2>
+          <ul>
+            <!-- <li>Big Mac, $2 x 3</li>
+            <li>Big Mac, $2 x 3</li>
+            <li>Big Mac, $2 x 3</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

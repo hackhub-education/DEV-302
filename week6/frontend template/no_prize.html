@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>梅賽德斯·奔馳-2018 Chinese New Year</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1, user-scalable=no, maximum-scale=1, height=device-height">
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
+	</head>
+	<body>
+		<header>
+			<img src="img/logo.png" alt="Mercedes-Benz">
+		</header>
+		<main>
+			<br>
+			<h3 class="blue left">很抱歉，您沒有中獎。但這并不會影響您在新的一年滾滾而來的好運與財源。記得向店內索取一份紅包討個好彩頭吧！新年快樂！</h3>
+			<br>
+			<!-- todo: chagne the style="background-image: url(...)" to the prize image -->
+			<!-- we will get the prize by next week -->
+			<div class="main-img-wrapper" style="background-image: url(img/c1.jpg)">
+				<!-- use background to set the image -->
+			</div>
+			<br>
+			<script>
+				//simple slider
+				var i = 2;
+				window.setInterval(function(){
+				  $('.main-img-wrapper').attr('style', 'background-image: url(img/c'+i+'.jpg)');
+				  i+=1;
+				  if (i>5){
+				  	i=1;
+				  }
+				}, 3000);
+			</script>
+			
+			
+			<div id="content">
+				<div>
+					<a href="https://www.mbvancouver.ca/new-vehicle-offers/" class="link-btn">點擊查看奔馳新春特惠</a>
+				</div>	
+				
+			</div>			
+		</main>
+		<footer>
+			<p>Mercedes-Benz Vancouver Retail Group</p>
+			<!-- <p><a href="http://thinko.ca/">Powered by Thinko Technology LTD.</a></p> -->
+		</footer>
+	</body>
+</html>
+
