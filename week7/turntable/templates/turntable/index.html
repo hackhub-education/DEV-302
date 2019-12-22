@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+{% if prize_list %}
+<ul>
+  {% for prize in prize_list %}
+  <li>
+    {{ prize.name }} {{ prize.amount }}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No prizes are available.</p>
+{% endif %}

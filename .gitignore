@@ -3,5 +3,9 @@ my_first_app/env
 =======
 Login_app/env
 week4/env
+<<<<<<< HEAD
 .DS_store
+>>>>>>> master
+=======
+.DS_Store
 >>>>>>> master
