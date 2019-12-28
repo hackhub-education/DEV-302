@@ -6,5 +6,5 @@ app_name = 'turntable'
 urlpatterns = [
     # ex: /turntable/
     path('', views.index, name='index'),
-
+    path('start', views.start, name='start')
 ]

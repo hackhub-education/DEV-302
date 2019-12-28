@@ -1,0 +1,10 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<center>
+    <h1>Thank you for participation</h1>
+    {% if user_phone %}
+    <h2>user{{user_phone}} has already participated</h2>
+    {% endif %}
+</center>

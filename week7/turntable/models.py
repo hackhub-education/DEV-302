@@ -11,3 +11,10 @@ class Prizes(models.Model):
 
     def __str__(self):
         return self.name+str(self.amount)
+
+class User(models.Model):
+    user_phone = models.IntegerField()
+    prize_name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return "user" + str(self.user_phone)[:3] + "***" + str(self.user_phone)[:-4] + " win " + self.prize_name
