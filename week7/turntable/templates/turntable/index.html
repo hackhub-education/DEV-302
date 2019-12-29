@@ -13,3 +13,9 @@
 {% else %}
 <p>No prizes are available.</p>
 {% endif %}
+
+<form action="{% url 'turntable:phone_check' %}" method="POST">
+  {% csrf_token %}
+  <input name="phone" type="tel" />
+  <input type="submit" />
+</form>
