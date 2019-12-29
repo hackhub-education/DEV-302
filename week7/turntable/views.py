@@ -15,7 +15,7 @@ def start(request):
 
     print("\n\nFROM PHONE: ", user_phone)
     if not User.objects.filter(user_phone=user_phone).exists():
-        prizes_list = Prizes.objects.filter(amount>0).order_by('-id')
+        prizes_list = Prizes.objects.filter(amount!=0).order_by('-id')
         # create a random range and generate a dice for prize
         range = 100
         for prize in prizes_list:
