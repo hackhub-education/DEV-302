@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,14 +6,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1, user-scalable=no, maximum-scale=1, height=device-height">
-		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		<link rel="shortcut icon" type="image/png" href="{% static 'turntable/img/favicon.png' %}" />
+		<link rel="stylesheet" type="text/css" media="screen" href="{% static 'turntable/css/style.css' %}" />
 		
 		<script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
 	</head>
 	<body>
 		<header>
-			<img src="img/logo.png" alt="Mercedes-Benz">
+			<img src="{% static 'turntable/img/logo.png' %}" alt="Mercedes-Benz">
 		</header>
 		<main>
 			<br>
