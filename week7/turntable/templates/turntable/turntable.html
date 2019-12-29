@@ -10,10 +10,18 @@
 		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1, user-scalable=no, maximum-scale=1, height=device-height">
 		<link rel="shortcut icon" type="image/png" href="{%static 'turntable/img/favicon.png'%}" />
 		<link rel="stylesheet" type="text/css" media="screen" href="{%static 'turntable/css/style.css'%}" />
+
+
+		
 		
 		<script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
 		<script src="{%static 'turntable/js/turntable.js'%}" defer></script>
-		<script> var prize = '{{prize_id}}' </script>
+		<script>window.onload = function() {
+			var getInput = '{{prize_}}';
+			localStorage.setItem("storageName",getInput);
+		 }</script>
+		<script> var prize = 2 </script>
+	
 	</head>
 	<body id="turntable">
 		<header>

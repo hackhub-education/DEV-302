@@ -55,6 +55,11 @@ $(document).ready(function(){
             rotating(prize);
         }
     }
+    
+
+
+
+
     //旋转
     function rotating(prize) {
         var timer = null;
@@ -67,7 +72,9 @@ $(document).ready(function(){
             setTimeout(function () {
                 offOn = !offOn;
                 num = rdm % 360;
-    
+
+                //send data
+                
 
                 // // todo: remove precentage
                 if (prize == 1) { 

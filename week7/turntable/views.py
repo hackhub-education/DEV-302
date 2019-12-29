@@ -18,7 +18,7 @@ def index(request):
 def phoneno(request):
     prize_list = Prizes.objects.order_by('-amount')
     base = 1000
-    amount = random.randint(0,993)
+    amount = random.randint(0,999)
     difference = base - amount
     if difference > 0 and  difference == 1:
         prize_id = 1
@@ -42,6 +42,7 @@ def phoneno(request):
          prize_id = 7
     
     user_number = request.POST.get("user_number")
+    
     context = {
         'prize_id':   prize_id
 
@@ -52,5 +53,18 @@ def phoneno(request):
        new_user = User(number=user_number)
        new_user.save()
        return render(request, 'turntable/turntable.html',context)
+       
+
+
+def prizes(request):
+    prize_id = request.POST.get("prize")
+    context = {
+        'prize_id': prize_id
+    }
+    return render(request, 'turntable/prize.html',context)
+
+def no_prizes(request):
+    return render(request,'turntable/no_prize.html'
+    )
 
 
