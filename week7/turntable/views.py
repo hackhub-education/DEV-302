@@ -21,14 +21,14 @@ def index(request):
 
 def phoneno(request):
     user_number = request.POST.get("user_number")
-    if  User.object.filter(number=user_number).exist():
+    if  User.objects.filter(number=user_number).exist():
         prize = randint(0, 10)
         prize_id = prize
         context = {
         'price_id':   prize_id,
         'price':   prize,
         }
-       return render(request, 'turntable/number_used.html', context)
+        return render(request, 'turntable/number_used.html', context)
     else:
        new_user = User(number=user_number)
        new_user.save()
