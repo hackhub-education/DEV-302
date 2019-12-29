@@ -22,15 +22,15 @@ def start(request):
         for prize in prizes_list:
             range += prize.amount
         prize_dice = random.randint(0,range)
-        dice_level = 100
+        dice_level = 10
         prize_id = 7
         # define the prize base on the generated dice
-        if prize.id <= dice_level:
+        if prize_dice <= dice_level:
             prize_id=7
         else:
             for prize in prizes_list:
-                dice_level += prize['amount']
-                prize_id = prize['id']
+                dice_level += prize.id
+                prize_id = prize.id
                 if prize_dice < dice_level:
                     break
         
@@ -45,16 +45,17 @@ def reward(request):
     result = request.POST
     if request.POST:
         phone = result['user_phone']
-        prize = result['prize_id']
+        prize = result.get('prize_id')
         reward=Prizes.objects.get(id=prize)
-        current_user = User(user_phone=phone, prize_name=reward['name'])
-        reward.amount -= 1
-        # reward.save()
-        # user.save()
-        context = {'prize_id':reward.id, 'prize_name':reward.name}
-        if prize == 7:
+        current_user = User(user_phone=phone, prize_name=reward.name)
+        if prize != '7':
+            reward.amount -= 1
+        reward.save()
+        current_user.save()
+        context = {'user_phone':phone, 'prize_id':reward.id, 'prize_name':reward.name, 'img':'turntable/img/'+str(reward.id)+'.png'}
+        if prize == '7':
             return render(request, 'turntable/no_prize.html',context)
         else:
-            return render(request, 'turntable/prize.html')
+            return render(request, 'turntable/prize.html',context)
 
     

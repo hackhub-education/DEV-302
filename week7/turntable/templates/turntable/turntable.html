@@ -37,12 +37,13 @@
 			<div class="input-wrapper blue">
 				<!-- todo: Raphael: change this number dynamic -->
 				<p class="input">您輸入的手機號碼為: {{user_phone}}</p>
+				<p>{{prize_id}}</p>
 			</div>
 		</div>
 		<form id="reward" action="/turntable/reward" method="POST" hidden>
 			{% csrf_token %}
 			<input type="phone" name="user_phone" value="{{user_phone}}">
-			<input type="number" name="prize_id" valuse="{{prize_id}}">
+			<input type="number" name="prize_id" value="{{prize_id}}">
 		</form>
 	</main>
 	<footer>

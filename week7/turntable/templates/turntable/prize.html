@@ -24,12 +24,12 @@
 			</div>
 			<!-- todo: chagne the prize name "奔馳開瓶器/酒塞" dynamic -->
 			<h2 class="red">恭喜中獎！您贏得了 <br>"{{prize_name}}" 一份</h2>
-			<img src="{% static 'turntable/img/'+prize_id+'.png' %}">
+			<img src="{% static img %}">
 			<p class="left">请將該頁面截圖並向 Aberdeen Centre Mercedes me 店內員工出示以獲取該獎品<br>展示圖片可能與實物不符，請以實物為準</p>
 			<div id="content">
 				<div class="input-wrapper red">
 					<!-- todo: Raphael: change this number dynamic -->
-					<p class="input">您輸入的手機號碼為: 6041231234</p>
+					<p class="input">您輸入的手機號碼為: {{user_phone}}</p>
 				</div>
 			</div>			
 		</main>

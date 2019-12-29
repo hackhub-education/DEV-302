@@ -18,4 +18,4 @@ class User(models.Model):
     prize_name = models.CharField(max_length=200)
 
     def __str__(self):
-        return "user" + str(self.user_phone)[:3] + "***" + str(self.user_phone)[:-4] + " win " + self.prize_name
+        return "user" + str(self.user_phone) + " win " + self.prize_name
