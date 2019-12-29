@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-
+import random
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import loader
 from . import forms
@@ -8,25 +8,42 @@ from django.urls import reverse
 
 
 def index(request):
-    prize_list = Prizes.objects.order_by('-amount')
-    context = {
-        'prize_list':   prize_list
-
-    }
-    return render(request, 'turntable/index.html', context)
+    return render(request, 'turntable/index.html')
 
 def start(request):
-    sub = forms.start()
-    if request.method=='POST':
-        sub = forms.start(request.POST)
-        user_phone = str(sub['user_phone'].value())
+    user_phone = request.POST['user_phone']
 
-        print("\n\nFROM PHONE: ", user_phone)
-        if not User.objects.filter(user_phone=user_phone).exists():
-            context = {'user_phone':user_phone}
-            return render(request, 'turntable/turntable_page.html',context)
+    print("\n\nFROM PHONE: ", user_phone)
+    if not User.objects.filter(user_phone=user_phone).exists():
+        prizes_list = Prizes.objects.order_by('-id')
+        # create a random range and generate a dice for prize
+        range = 100
+        for prize in prizes_list:
+            range += prize['amount']
+        prize_dice = random.randint(0,range)
+        dice_level = 100
+        # define the prize base on the generated dice
+        if prize <= dice_level:
+            prize_id=7
         else:
-            context = {'user_phone':user_phone}
-            return render(request, 'turntable/invalid_user_page.html',context)
-    return render(request, 'turntable/get_phone.html', {'form':sub})
+            for prize in prizes_list:
+                dice_level += prize['amount']
+                prize_id = prize['id']
+                if prize_dice < dice_level:
+                    break
+        
+        context = {'user_phone':user_phone, 'prize_id':prize_id}
+        return render(request, 'turntable/turntable.html', context)
+    else:
+        context = {'user_phone':user_phone}
+        return render(request, 'turntable/number_used.html', context)
+
+def reward(request):
+    phone = request.POST['user_phone']
+    prize = request.POST('prize_id')
+    reward=Prizes.objects.filter(id=prize)
+    user = User(user_phone=phone, prize_name=reward['name'])
+    # user.save()
+    return render(request, 'turntable/prize.html',)
+
     

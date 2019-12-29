@@ -1,17 +1,49 @@
 {% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>梅賽德斯·奔馳-2018 Chinese New Year</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1, user-scalable=no, maximum-scale=1, height=device-height">
+		<link rel="shortcut icon" type="image/png" href="{% static 'turntable/img/favicon.png' %}" />
+		<link rel="stylesheet" type="text/css" media="screen" href="{% static 'turntable/css/style.css' %}" />
+		
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
+	</head>
+	<body>
+		<header>
+			<img src="{% static 'turntable/img/logo.png' %}" alt="Mercedes-Benz">
+		</header>
+		<main>
+			
+			<div class="main-img-wrapper home-img-wrapper">
+				<h3>梅賽德斯·奔馳 祝您</h3>
+				<h1>新春快樂!</h1>
+				<!-- use background to set the image -->
+			</div>
+			<h2>歡迎光臨梅賽德斯·奔馳 列治文店</h2>
+			<div id="content">
+				<!-- todo: if you want to submit using form -->
+				<form action="/turntable/start" method="POST">
+					{% csrf_token %}
+					<div class="input-wrapper blue">
+						<input  placeholder="請于此處填寫手機號碼以參與抽獎" type="phone" name="user_phone">
+					</div>
+					<div>
+						<button type="submit" name="start" class="btn home-btn">進入抽獎</button>
+					</div>
+					<div>
+						<!-- todo:oscar add terms&condition link, if we have it -->
+						<a href="https://www.mercedes-benz.ca/content/canada/mpc/mpc_canada_website/en/home_mpc/privacy_statement.ngrb.html" class="terms-btn">活動條款</a>
+					</div>	
+				</form>
+			</div>			
+		</main>
+		<footer>
+			<p>Copyright &copy; Mercedes-Benz Vancouver Retail Group</p>
+			<!-- <p><a href="http://thinko.ca/">Powered by Thinko Technology LTD.</a></p> -->
+		</footer>
+	</body>
+</html>
 
-{% if prize_list %}
-<ul>
-  {% for prize in prize_list %}
-  <li>
-    {{ prize.name }} {{ prize.amount }}
-  </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>No prizes are available.</p>
-{% endif %}
-
-<a href="{% url 'turntable:start' %}">start turntable</a>

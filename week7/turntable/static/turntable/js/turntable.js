@@ -3,7 +3,7 @@
 function rotateDegree(prize){
     var cat = 36; //总共10个扇形区域，每个区域约36度
     var randomDeg = Math.random() * 36 - 15; //干扰角度，每次不会都指向区域正中心
-    var deg = 360;
+    var deg = 2160;
     if (prize == 1) {
         deg += 360-36*2 + randomDeg;
     }
@@ -45,7 +45,7 @@ $(document).ready(function(){
     // 6: Golf ball, tees, towel set 奔馳高爾夫球/球釘/毛巾三件套 （0.1%）
     // 7: no prize
 
-    var prize = 7; //todo: Raphael change this dynamic
+    var prize = prize_id; //todo: Raphael change this dynamic
 
 
     oPointer.onclick = function () {
@@ -102,5 +102,8 @@ $(document).ready(function(){
             }, 4000);
         }, 30);
     }
+    $(function(){
+        $('#reward').submit();
+    });
 })
 
