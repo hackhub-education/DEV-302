@@ -21,7 +21,7 @@ def index(request):
 
 def phoneno(request):
     user_number = request.POST.get("user_number")
-    if  User.objects.filter(number=user_number).exist():
+    if  User.objects.filter(number=user_number):
         prize = randint(0, 10)
         prize_id = prize
         context = {
