@@ -21,7 +21,7 @@
 			<br>
 			<!-- todo: chagne the style="background-image: url(...)" to the prize image -->
 			<!-- we will get the prize by next week -->
-			<div class="main-img-wrapper" style="background-image: url(img/c1.jpg)">
+			<div class="main-img-wrapper" style="background-image: url({% static 'turntable/img/c1.jpg' %});">
 				<!-- use background to set the image -->
 			</div>
 			<br>
@@ -29,7 +29,7 @@
 				//simple slider
 				var i = 2;
 				window.setInterval(function(){
-				  $('.main-img-wrapper').attr('style', 'background-image: url(img/c'+i+'.jpg)');
+				  $('.main-img-wrapper').attr('style', "background-image: url({% static 'turntable/img/c'+i+'.jpg' %})");
 				  i+=1;
 				  if (i>5){
 				  	i=1;

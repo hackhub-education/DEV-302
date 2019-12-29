@@ -42,17 +42,19 @@ def start(request):
         return render(request, 'turntable/number_used.html', context)
 
 def reward(request):
-    phone = request.POST['user_phone']
-    prize = request.POST['prize_id']
-    reward=Prizes.objects.get(id=prize)
-    current_user = User(user_phone=phone, prize_name=reward['name'])
-    reward.amount -= 1
-    # reward.save()
-    # user.save()
-    context = {'prize_id':reward.id, 'prize_name':reward.name}
-    if prize == 7:
-        return render(request, 'turntable/no_prize.html',context)
-    else:
-        return render(request, 'turntable/prize.html')
+    result = request.POST
+    if request.POST:
+        phone = result['user_phone']
+        prize = result['prize_id']
+        reward=Prizes.objects.get(id=prize)
+        current_user = User(user_phone=phone, prize_name=reward['name'])
+        reward.amount -= 1
+        # reward.save()
+        # user.save()
+        context = {'prize_id':reward.id, 'prize_name':reward.name}
+        if prize == 7:
+            return render(request, 'turntable/no_prize.html',context)
+        else:
+            return render(request, 'turntable/prize.html')
 
     
