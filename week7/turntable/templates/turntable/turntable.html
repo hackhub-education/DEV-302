@@ -1,0 +1,45 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>梅賽德斯·奔馳-2018 Chinese New Year</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1, user-scalable=no, maximum-scale=1, height=device-height">
+		<link rel="shortcut icon" type="image/png" href="{%static 'turntableimg/favicon.png'%}" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
+		<script src="{%static 'turntable/js/turntable.js'%}" defer></script>
+	</head>
+	<body id="turntable">
+		<header>
+			<img src="{%static 'turntable/img/logo.png'%}" alt="Mercedes-Benz">
+		</header>
+		<main>
+			<h3>梅賽德斯·奔馳 祝您</h3>
+			<h1>新春快樂!</h1>
+			<div class="turntable-wrapper">
+				<div id="turntable-bg">
+					<img src="{%static 'turntable/img/pointer.png'%}" alt="pointer" class="pointer">
+					<img src="{%static 'turntable/img/turntable.png'%}" alt="turntable"  class="turntable-base">
+				</div>
+			</div>
+			<h2>請點擊上方轉盤中央“開始抽獎”字樣進行抽獎</h2>
+			<p>每個手機號碼僅能進行一次抽獎，敬請理解。</p>
+			<div id="content">
+				<div class="input-wrapper blue">
+					<!-- todo: Raphael: change this number dynamic -->
+					<p class="input">您輸入的手機號碼為: 6041231234</p>
+				</div>
+			</div>      
+		</main>
+		<footer>
+			<p>Mercedes-Benz Vancouver Retail Group</p>
+			<!-- <p><a href="http://thinko.ca/">Powered by Thinko Technology LTD.</a></p> -->
+		</footer>
+	</body>
+</html>
+
