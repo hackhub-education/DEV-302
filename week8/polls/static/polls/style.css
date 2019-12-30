@@ -1,3 +1,10 @@
 li a {
   color: green;
 }
+
+#results {
+  display: none;
+  border: dotted 2px black;
+  padding: 20px;
+  margin: 10px;
+}
