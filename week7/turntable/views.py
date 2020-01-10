@@ -44,11 +44,11 @@ def phoneno(request):
     user_number = request.POST.get("user_number")
     
     context = {
-        'prize_id':   prize_id
-
+        'prize_id':   prize_id,
+        'user_number':user_number
     }
     if  User.objects.filter(number=user_number):
-        return render(request, 'turntable/number_used.html')
+        return render(request, 'turntable/number_used.html',context)
     else:
        new_user = User(number=user_number)
        new_user.save()
@@ -57,14 +57,20 @@ def phoneno(request):
 
 
 def prizes(request):
-    prize_id = request.POST.get("prize")
+    user_number = request.POST.get("user_number")
+    prize_id = request.POST.get("prize_id")
     context = {
-        'prize_id': prize_id
+        'prize_id':   prize_id,
+        'user_number':user_number
     }
     return render(request, 'turntable/prize.html',context)
 
 def no_prizes(request):
     return render(request,'turntable/no_prize.html'
     )
+
+
+
+
 
 

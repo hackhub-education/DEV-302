@@ -31,25 +31,15 @@
 				<!-- use background to set the image -->
 			</div>
 			<!-- todo: chagne the prize name "奔馳開瓶器/酒塞" dynamic -->
+			<img src="{%static 'turntable/img/logo.png'%}" alt="prize-reward">
 			<h2 class="red">恭喜中獎！您贏得了 <br>
-			<script>
-				var queryString = decodeURIComponent(window.location.search); //parsing
-				queryString = queryString.substring(1);
-				var queries = queryString.split("&");
-				for (var i = 0; i < queries.length; i++)
-					{
-  						document.write(queries[i] + "<br>");
-					}
-			
-			
-			
-			
-			</script></h2>
+				
+			</h2>
 			<p class="left">请將該頁面截圖並向 Aberdeen Centre Mercedes me 店內員工出示以獲取該獎品<br>展示圖片可能與實物不符，請以實物為準</p>
 			<div id="content">
 				<div class="input-wrapper red">
 					<!-- todo: Raphael: change this number dynamic -->
-					<p class="input">您輸入的手機號碼為: 6041231234</p>
+					<p class="input">您輸入的手機號碼為: <script>'{{user_number}}'</script> </p>
 				</div>
 			</div>			
 		</main>

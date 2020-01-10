@@ -1,0 +1,33 @@
+{% load static %}
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script src="{% static '/polls/main.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+
+<h1>{{ question.question_text }}</h1>
+
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="{% url 'polls:vote_ajax' %}" method="post">
+  {% csrf_token %} {% for choice in question.choice_set.all %}
+  <input
+    type="radio"
+    name="choice"
+    id="choice{{ forloop.counter }}"
+    value="{{ choice.id }}"
+  />
+  <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label
+  ><br />
+  {% endfor %}
+<input type="hidden" name="question_id" value={{question_id}}>
+  <input id="submit" type ="buttun" value="Vote" />
+</form>
+<div id="result">
+  <h2 id="message">Message</h2>
+  <ul id="options"></ul>
+</div>
