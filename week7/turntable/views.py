@@ -57,10 +57,10 @@ def phoneno(request):
 
 
 def prizes(request):
-    user_number = request.POST.get("user_number")
-    prize_id = request.POST.get("prize_id")
+    user_number = request.GET.get("user_number")
+    prize_id = request.GET.get("prize_id")
     context = {
-        'prize_id':   prize_id,
+        'prize_img':   'turntable/img/'+prize_id+'.png',
         'user_number':user_number
     }
     return render(request, 'turntable/prize.html',context)

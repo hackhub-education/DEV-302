@@ -62,27 +62,28 @@ $(document).ready(function() {
         num = rdm % 360;
 
         //send data
+        var phone = $("#user_number").val(); //6041231234
 
         // // todo: remove precentage
         if (prize == 1) {
           // Sports hat/cap 奔馳運動帽 （0.3%）
           // todo: Raphael 这个地方你需要改一下prize.html 来配合我
-          window.location.href = "./prize.html?name=Sportshat";
+          window.location.href = "./prize.html?prize_id=1&user_number=" + phone;
         } else if (prize == 2) {
           // Sport sunglasses 奔馳運動墨鏡 （0.3%）
-          window.location.href = "./prize.html?name=sunglasses";
+          window.location.href = "./prize.html?prize_id=1&user_number=" + phone;
         } else if (prize == 3) {
           // Wine stopper/opener set 奔馳開瓶器/酒塞 （0.3%）
-          window.location.href = "./prize.html?name=stopper";
+          window.location.href = "./prize.html?prize_id=1&user_number=" + phone;
         } else if (prize == 4) {
           // Smart brand silicone mug  Smart馬克杯 （0.3%）
-          window.location.href = "./prize.html?name=stopper";
+          window.location.href = "./prize.html?prize_id=1&user_number=" + phone;
         } else if (prize == 5) {
           // Metal water bottle 奔馳金屬質水壺 （0.2%）
-          window.location.href = "./prize.html?name=stopper";
+          window.location.href = "./prize.html?prize_id=1&user_number=" + phone;
         } else if (prize == 6) {
           // Golf ball, tees, towel set 奔馳高爾夫球/球釘/毛巾三件套 （0.1%）
-          window.location.href = "./prize.html?name=golf";
+          window.location.href = "./prize.html?prize_id=1&user_number=" + phone;
         } else if (prize == 7) {
           //未中奖
           window.location.href = "./no_prize.html";
