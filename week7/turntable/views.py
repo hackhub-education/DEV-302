@@ -47,7 +47,7 @@ def phoneno(request):
         'prize_id':   prize_id,
         'user_number':user_number
     }
-    if  User.objects.filter(number=user_number):
+    if User.objects.filter(number=user_number):
         return render(request, 'turntable/number_used.html',context)
     else:
        new_user = User(number=user_number)
