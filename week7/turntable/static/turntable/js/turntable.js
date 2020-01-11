@@ -44,6 +44,8 @@ $(document).ready(function() {
     if (offOn) {
       oTurntable.style.transform = "rotate(0deg)";
       offOn = !offOn;
+      runlottery();
+      let prize=$("#prize_id").val();
       rotating(prize);
     }
   };
@@ -100,3 +102,14 @@ $(document).ready(function() {
     // $("#reward").submit();
   });
 });
+
+let runlottery = function(){
+  $.ajax({
+    url: "/turntable/lottery_ajax",
+    type:'post',
+    success: function(data) {
+      let dict =JSON.parse(data);
+      $("prize_id").val(data.prize_id);
+    }
+  });
+}

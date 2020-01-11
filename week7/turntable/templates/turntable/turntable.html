@@ -13,9 +13,6 @@
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
 	<script src="{% static 'turntable/js/turntable.js' %}" defer></script>
-	<script>
-		var prize = '{{prize_id}}';
-	</script>
 </head>
 
 <body id="turntable">
@@ -37,13 +34,12 @@
 			<div class="input-wrapper blue">
 				<!-- todo: Raphael: change this number dynamic -->
 				<p class="input">您輸入的手機號碼為: {{user_phone}}</p>
-				<p>{{prize_id}}</p>
 			</div>
 		</div>
 		<form id="reward" action="/turntable/reward" method="POST" hidden>
 			{% csrf_token %}
 			<input type="phone" name="user_phone" value="{{user_phone}}">
-			<input type="number" name="prize_id" value="{{prize_id}}">
+			<input type="number" id="prize_id" name="prize_id">
 		</form>
 	</main>
 	<footer>
