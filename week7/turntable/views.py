@@ -29,7 +29,7 @@ def phone_check(request):
         prize.save()
         player = Player(phone=phone, prize=prize)
         player.save()
-        return render(request, 'turntable/turntable.html', {phone: phone, prize=prize})
+        return render(request, 'turntable/turntable.html', {'phone': phone, 'prize'=prize})
 
     # do a db check:
 
