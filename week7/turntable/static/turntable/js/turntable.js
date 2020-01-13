@@ -98,9 +98,7 @@ $(document).ready(function() {
       $("#reward").submit();
     }, 3000);
   }
-  $(function() {
-    // $("#reward").submit();
-  });
+ 
 });
 
 let runlottery = function(){
@@ -108,8 +106,7 @@ let runlottery = function(){
     url: "/turntable/lottery_ajax",
     type:'post',
     success: function(data) {
-      let dict =JSON.parse(data);
-      $("prize_id").val(data.prize_id);
+      $("#prize_id").val(data.prize_id);
     }
   });
 }

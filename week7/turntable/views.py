@@ -14,7 +14,6 @@ def index(request):
 def start(request):
     user_phone = request.POST['user_phone']
 
-    print("\n\nFROM PHONE: ", user_phone)
     if not User.objects.filter(user_phone=user_phone).exists():
         
         context = {'user_phone':user_phone}
@@ -26,9 +25,9 @@ def start(request):
 def reward(request):
     result = request.POST
     if request.POST:
-        phone = result['user_phone']
-        prize = result['prize_id']
-        print(prize)
+        phone = result.get('user_phone')
+        prize = result.get('prize_id')
+
         reward=Prizes.objects.get(id=prize)
         current_user = User(user_phone=phone, prize_name=reward.name)
         if prize != '7':
